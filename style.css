@@ -1,0 +1,587 @@
+/* CSS Variables */
+/* :root{
+    --color-primary:#eaeaea;
+    --color-secondary:#fff;
+
+    --borderColor:#c1c1c1;
+
+    --mainfont-color:black;
+    --secondaryfont-color:#4b5156;
+
+    --previewBG:rgb(251, 249, 243, 0.8);
+    --previewShadow:rgb(205, 207, 209, 0.5);
+} */
+
+/* Themes */
+.theme-light {
+    --color-primary: #eaeaea;
+    --color-secondary: #fff;
+
+    --borderColor:#c1c1c1;
+
+    --mainfont-color: #000000;
+    --secondaryfont-color: #000000;
+
+    --previewBG:rgb(251, 249, 243, 0.8);
+    --previewShadow:rgb(205, 207, 209, 0.5);
+
+    --gitbtn-color: lightslategrey;
+    --gitbtnborder-color: lightslategrey;
+
+    --filtervalue: none;
+
+}
+
+.theme-dark {
+    --color-primary: rgb(36, 41, 46);
+    --color-secondary: rgb(49, 54, 63);
+
+    --borderColor:#4d4d4d;
+
+    --mainfont-color: #fff;
+    --secondaryfont-color: #eeeeee;
+
+    --previewBG:rgb(47, 47, 48, 0.8);
+    --previewShadow:rgb(28, 28, 28, 0.5);
+
+    --gitbtn-color: #fff;
+    --gitbtnborder-color: #eeeeee;
+
+    --filtervalue: drop-shadow(3px 1px 4px black);
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--mainfont-color);
+    font-family: 'Source Code Pro', monospace;
+}
+
+p, a, li, span, label, input, textarea{
+    color: var(--secondaryfont-color);
+    font-family: 'Cabin', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 18px;}
+
+.s1{
+    overflow: auto;
+    background-color: var(--color-primary);
+    border-bottom:1px solid var(--borderColor);
+}
+
+.s2{
+    overflow: auto;
+    background-color: var(--color-secondary);
+    border-bottom:1px solid var(--borderColor);
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wrapper{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 10em;
+}
+
+.intro-wrapper{
+    background-color: var(--color-secondary);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+    box-shadow: -1px 1px 15px -1px rgba(0,0,0,0.75);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'nav-wrapper nav-wrapper'
+    'left-column right-column'
+    ;
+}
+
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid var(--borderColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--color-primary); */
+    background-color: var(--color-secondary);
+}
+
+.dots-wrapper{
+    display: flex;
+    padding: 10px;
+}
+
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    box-shadow: -2px 1px 5px -1px rgba(0,0,0,0.9);
+    margin: 5px;
+}
+
+#dot1{
+    background-color: #FC6058;
+}
+
+#dot2{
+    background-color: #FEC02F;
+}
+
+#dot3{
+    background-color: #2ACA3E;
+}
+
+#navigation{
+    margin: 0;
+    padding: 10px;
+}
+
+#navigation li{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.left-column{
+    grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    
+    height: 225px;
+    width: 225px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+    border-radius: 50%;
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+/* .theme-selector{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid var(--themeSelectorBorder);
+    margin: 5px;
+    
+    box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.75);
+    
+    cursor: pointer;
+}
+
+.theme-selector:hover{
+    border-width: 5px;
+}
+
+#light-theme{
+    background-color: #fff;
+}
+
+#dark-theme{
+    background-color: #343a40;
+} */
+
+/* Theme Selector */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1 {
+    color: var(--font-color);
+    font-family: sans-serif;
+}
+.container button {
+    color: var(--font-color);
+    background: var(--color-primary);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(82px);
+    -ms-transform: translateX(82px);
+    transform: translateX(82px);
+    background: #424445 url('https://i.ibb.co/FxzBYR9/night.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Experience and Education Section */
+.right-column{
+    grid-area: right-column;
+    display: grid;
+    align-content: center;
+    
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+#preview{
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    border-radius: 25px;
+    background-color: var(--previewBG);
+    padding: 15px;
+    position: relative;
+}
+
+#preview-shadow{
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 150px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-top: 15px;
+    padding-bottom: 50px;
+    gap: 100px;
+}
+
+#resume{
+    font: 300px;
+}
+.center-title{
+    text-align: center;
+}
+
+#skills{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+    font-size: 20px;
+}
+
+#skills ul li{
+    padding-bottom: 15px;
+}
+
+.journey{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
+.summary{
+    text-align: left;
+}
+
+#CalPlug{
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 10px;
+    filter: var(--filtervalue);
+}
+
+#UCI{
+    display: block;
+    width: 85%;
+    margin: auto;
+    filter: var(--filtervalue);
+}
+
+/* Projects Section */
+
+.project-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 420px);
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.project{
+    border: 1px solid var(--borderColor);
+    box-shadow: -1px 1px 15px -1px rgba(0,0,0,0.75);
+}
+
+.project-preview{
+    background-color:  var(--color-secondary);
+    padding: 15px;
+}
+
+.thumbnail{
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+#PetrWare-thumb{
+    height: 240px;
+}
+
+#TMGE-thumb{
+    height: 240px;
+}
+
+.project-title{
+    text-align: center;
+    margin: 0;
+}
+
+.project-intro{
+    font-size: 16px;
+}
+
+.tech-stack{
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+
+.tech-used{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tech-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+#mobile-app-list{
+    padding-bottom: 20px;
+}
+
+.btn-demo{
+    display: block;
+    font-weight: 400;
+    color: #212529;
+    background-color: #08c0d1;
+    border: 1px solid #08c0d1;
+    border-radius: .25rem;
+    text-align: center;
+    padding: .375rem .75rem;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s 
+}
+
+.btn-git{
+    display: block;
+    font-weight: 400;
+    color: #212529;
+    background-color: var(--gitbtn-color);
+    border: 1px solid var(--gitbtnborder-color);
+    border-radius: .25rem;
+    text-align: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color .15s 
+}
+
+
+/* Contacts Section */
+#contact-title{
+    text-align: center;
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.icons{
+    list-style-type: none;
+}
+
+.icons li{
+    float: left;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+/* Add a hover effect*/
+.fa:hover {
+    opacity: 0.7;
+ }
+
+.fa-linkedin {
+    background: #007bb5;
+    border: 1px solid #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: #2a2c2d;
+    border: 2px solid #2a2c2d;
+    color: white;
+}
+
+.fa-envelope-o {
+  background: #007bb5;
+  border: 1px solid #007bb5;
+  color: white;
+}
+
+.fa-file-pdf-o{
+    background: red;
+    border: 1px solid red;
+    color: white;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 95%
+    }
+}
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-column' 
+            'right-column'
+        ;
+    }
+
+    .about-wrapper{
+        gap: 10px;
+    }
+
+    .right-column{
+        justify-content: center;
+    }
+
+    #preview{
+        width: 260px;
+    }
+    
+    #preview-shadow{
+        width: 260px;
+    }
+
+    #mobile-app-list{
+        padding-bottom: 0px;
+    }
+
+    .fa{
+        font-size: 30px;
+        width: 30px;
+    }
+
+    .greeting-wrapper h1{
+        font-size: 38px;
+    }
+}
