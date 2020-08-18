@@ -1,17 +1,3 @@
-/* CSS Variables */
-/* :root{
-    --color-primary:#eaeaea;
-    --color-secondary:#fff;
-
-    --borderColor:#c1c1c1;
-
-    --mainfont-color:black;
-    --secondaryfont-color:#4b5156;
-
-    --previewBG:rgb(251, 249, 243, 0.8);
-    --previewShadow:rgb(205, 207, 209, 0.5);
-} */
-
 /* Themes */
 .theme-light {
     --color-primary: #eaeaea;
@@ -56,7 +42,7 @@ html, body{
 }
 
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 h1, h2, h3, h4, h5, h6, strong{
@@ -189,53 +175,7 @@ h6 { font-size: 18px;}
     justify-content: center;
 }
 
-/* .theme-selector{
-    height: 30px;
-    width: 30px;
-    background-color: black;
-    border-radius: 50%;
-    border: 2px solid var(--themeSelectorBorder);
-    margin: 5px;
-    
-    box-shadow: -1px 1px 8px -1px rgba(0,0,0,0.75);
-    
-    cursor: pointer;
-}
-
-.theme-selector:hover{
-    border-width: 5px;
-}
-
-#light-theme{
-    background-color: #fff;
-}
-
-#dark-theme{
-    background-color: #343a40;
-} */
-
 /* Theme Selector */
-.container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background: var(--color-secondary);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.container h1 {
-    color: var(--font-color);
-    font-family: sans-serif;
-}
-.container button {
-    color: var(--font-color);
-    background: var(--color-primary);
-    padding: 10px 20px;
-    border: 0;
-    border-radius: 5px;
-}
-
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -449,6 +389,10 @@ input:checked + .slider:before {
 
 #mobile-app-list{
     padding-bottom: 20px;
+}
+
+#petrware-list{
+    padding-bottom: 23px;
 }
 
 .btn-demo{
