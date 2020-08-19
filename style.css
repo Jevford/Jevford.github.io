@@ -209,7 +209,7 @@ h6 { font-size: 18px;}
     content: "";
     height: 40px;
     width: 40px;
-    left: 0px;
+    left: -1px;
     bottom: 4px;
     top: 0;
     bottom: 0;
@@ -231,9 +231,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(82px);
-    -ms-transform: translateX(82px);
-    transform: translateX(82px);
+    -webkit-transform: translateX(83px);
+    -ms-transform: translateX(83px);
+    transform: translateX(83px);
     background: #424445 url('https://i.ibb.co/FxzBYR9/night.png');
     background-repeat: no-repeat;
     background-position: center;
